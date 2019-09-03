@@ -1,0 +1,12 @@
+###### Chmod mode questios ######
+
+The -c flag can be used to set this option for one-off commands:
+
+$ git -c core.fileMode=false diff
+
+And the --global flag will make it be the default behavior for the logged in user.
+
+$ git config --global core.fileMode false
+
+-------------------------------------------------------------------------------------------------
+
