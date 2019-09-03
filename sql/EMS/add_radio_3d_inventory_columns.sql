@@ -1,0 +1,12 @@
+﻿ALTER TABLE public.radio_3d_inventory ADD COLUMN composition_board_type_slot_1 integer;
+ALTER TABLE public.radio_3d_inventory ADD COLUMN composition_board_type_slot_2 integer;
+ALTER TABLE public.radio_3d_inventory ADD COLUMN composition_board_type_slot_3 integer;
+ALTER TABLE public.radio_3d_inventory ADD COLUMN composition_board_type_slot_4 integer;
+ALTER TABLE public.radio_3d_inventory ADD COLUMN composition_board_type_slot_5 integer;
+ALTER TABLE public.radio_3d_inventory ADD COLUMN composition_board_type_slot_6 integer;
+ALTER TABLE public.radio_3d_inventory ADD COLUMN composition_board_type_slot_7 integer;
+ALTER TABLE public.radio_3d_inventory ADD COLUMN composition_board_type_slot_8 integer;
+ALTER TABLE public.radio_3d_inventory ADD COLUMN composition_board_type_slot_9 integer;
+ALTER TABLE public.radio_3d_inventory ADD COLUMN composition_board_type_slot_10 integer;
+ALTER TABLE public.radio_3d_inventory ADD COLUMN composition_board_type_slot_11 integer;
+ALTER TABLE public.radio_3d_inventory ADD COLUMN composition_board_type_slot_12 integer;
