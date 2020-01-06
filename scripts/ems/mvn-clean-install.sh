@@ -2,7 +2,7 @@
 
 clear
 
-export HOME_DIRECTORY="/home/jefson/Furukawa/dev/workspace-ems/ConsciusEMS"
+export HOME_DIRECTORY="/home/jefson/workspace-ems/ConsciusEMS"
 export COMANDO='mvn clean install -U -Dmaven.test.skip=true -DskipTests -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2'
 export PACK_COMMAND='mvn package -Dmaven.test.skip=true -Dpackage.terminal=true -Dtms.system.context=dev -Dsystem.mode=product -Dadd.all.equipments=true'
 
@@ -16,7 +16,7 @@ export PACK_COMMAND='mvn package -Dmaven.test.skip=true -Dpackage.terminal=true 
 
 STOP_JBOSS='sudo kill -9 `pgrep -f jboss`'
 
-BUILD='$COMANDO; $PACK_COMMAND; rm -rf /opt/jboss/standalone/deployments/ems.war*; sudo rm -rf /opt/jboss/standalone/tmp/*;cp $HOME_DIRECTORY/software/EMS/main/modules/presentation/target/ems.war /opt/jboss/standalone/deployments/; sudo /etc/init.d/asga_ems_startup_ubuntu.sh start'
+BUILD='sudo kill -9 `pgrep -f jboss`; $COMANDO; $PACK_COMMAND; rm -rf /opt/jboss/standalone/deployments/ems.war*; rm -rf /opt/jboss/standalone/tmp/*;cp $HOME_DIRECTORY/software/EMS/main/modules/presentation/target/ems.war /opt/jboss/standalone/deployments/; /etc/init.d/asga_ems_startup.sh start'
 
 cd $HOME_DIRECTORY/software/EMS
 $COMANDO
@@ -75,6 +75,9 @@ $COMANDO
 
 
 
+
+
+
 cd $HOME_DIRECTORY/software/EMS/main/modules/application
 $COMANDO
 
@@ -87,6 +90,8 @@ $COMANDO
 cd $HOME_DIRECTORY/software/EMS/drivers/administrator
 $COMANDO
 
+cd $HOME_DIRECTORY/software/util/SystemRecovery
+$COMANDO
 
 
 
@@ -144,7 +149,7 @@ $COMANDO
 
 cd $HOME_DIRECTORY/software/EMS/main
 $COMANDO
-$PACK_COMMAND
+#$PACK_COMMAND
 
 
 #cp $HOME_DIRECTORY/software/EMS/main/modules/presentation/target/ems.war /opt/jboss/standalone/deployments/

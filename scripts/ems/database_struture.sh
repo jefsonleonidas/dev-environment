@@ -2,7 +2,7 @@
 
 clear
 
-WORKSPACE="/home/jefson/Furukawa/dev/workspace-ems/ConsciusEMS/software"
+WORKSPACE="/home/jefson/workspace-ems/ConsciusEMS/software"
 
 echo "Data base host: "
 read HOST
